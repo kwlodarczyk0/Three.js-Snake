@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="start">
+      <div class="start__container">
+        <h1 class="start__header">Snake</h1>
+        <button class="start__button">Play</button>
+        <div class="start__choose">
+          <label>
+            <input type="radio" name="size" checked />
+            <h4>Large<br />board</h4></label
+          >
+          <label>
+            <input type="radio" name="size" />
+            <h4>
+              Mid<br />
+              board
+            </h4></label
+          >
+          <label>
+            <input type="radio" name="size" />
+            <h4>
+              Small<br />
+              board
+            </h4></label
+          >
+        </div>
+      </div>
+    </section>
+    <section class="game none">
+      <div class="game__info">
+        <div class="game__info--score">
+          Score: <span class="score__amount">0</span>
+        </div>
+        <div class="game__info--timer hidden">
+          <span>Border off for the next: </span>
+          <span class="timerValue">0</span><span> seconds</span>
+        </div>
+      </div>
+      <div class="game__buttons">
+        <button class="game__buttons--music">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button class="game__buttons--grid">Show grid</button>
+      </div>
+      <canvas id="game__canvas" class="none"></canvas>
+    </section>
+
+    <section class="end none">
+      <div class="end__container">
+        <h1 class="end__header">Game over</h1>
+        <span>Your score: </span>
+        <span class="end__score"></span>
+        <div class="end__buttons">
+          <button class="end__button">
+            Play<br />
+            again
+          </button>
+          <button class="end__start">Back to menu</button>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"
+      integrity="sha512-NLtnLBS9Q2w7GKK9rKxdtgL7rA7CAS85uC/0xd9im4J/yOL4F9ZVlv634NAM7run8hz3wI2GabaA6vv8vJtHiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="snake.js" type="module"></script>
+  </body>
+</html>
